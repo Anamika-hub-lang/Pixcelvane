@@ -90,7 +90,7 @@ export default function CreativeShowcase() {
             className="flex gap-6"
             animate={{ x: [0, -50 * 200] }}
             transition={{
-              duration: 80,
+              duration: 130,
               repeat: Infinity,
               ease: 'linear',
             }}
