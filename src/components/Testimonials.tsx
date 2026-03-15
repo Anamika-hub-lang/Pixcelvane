@@ -99,20 +99,20 @@ export default function Testimonials() {
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto border border-white/20">
+                <div className="bg-[#FAF7F2] rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto border border-[#E5E0D8]">
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                    <p className="text-xl md:text-2xl text-[#1A1A2E] mb-8 leading-relaxed">
                       {testimonials[currentIndex].quote}
                     </p>
                     <div className="flex items-center gap-4">
                       <img
                         src={testimonials[currentIndex].avatar}
                         alt={testimonials[currentIndex].name}
-                        className="w-14 h-14 rounded-full object-cover border-2 border-white/30"
+                        className="w-14 h-14 rounded-full object-cover border-2 border-[#7A1E2C]/20"
                       />
                       <div className="text-left">
-                        <p className="font-bold text-white">{testimonials[currentIndex].name}</p>
-                        <p className="text-white/70">{testimonials[currentIndex].company}</p>
+                        <p className="font-bold text-[#1A1A2E]">{testimonials[currentIndex].name}</p>
+                        <p className="text-[#6B7280]">{testimonials[currentIndex].company}</p>
                       </div>
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export default function Testimonials() {
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'w-10' 
-                    : 'bg-white/30 hover:bg-white/50'
+                    : 'bg-white/40 hover:bg-white/60'
                 }`}
                 style={{ 
                   background: index === currentIndex ? '#FF6B35' : undefined 
