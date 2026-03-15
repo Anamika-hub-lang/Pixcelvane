@@ -4,7 +4,7 @@ import TrustedBy from '@/components/TrustedBy';
 import HowItWorks from '@/components/HowItWorks';
 import TransformYourDesign from '@/components/TransformYourDesign';
 import DesignInsights from '@/components/DesignInsights';
-import Portfolio from '@/components/Portfolio';
+import CreativeShowcase from '@/components/CreativeShowcase';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
 import Pricing from '@/components/Pricing';
@@ -20,12 +20,8 @@ export default function Home() {
       <TrustedBy />
       <HowItWorks />
       <TransformYourDesign />
-      <section id="portfolio">
-        <DesignInsights />
-      </section>
-      <section id="work">
-        <Portfolio />
-      </section>
+      <DesignInsights />
+      <CreativeShowcase />
       <Stats />
       <Testimonials />
       <Pricing />
