@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import TrustedBy from '@/components/TrustedBy';
 import HowItWorks from '@/components/HowItWorks';
 import Services from '@/components/Services';
-import ServicesImageSection from '@/components/ServicesImageSection';
 import Portfolio from '@/components/Portfolio';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
@@ -20,7 +19,6 @@ export default function Home() {
       <TrustedBy />
       <HowItWorks />
       <Services />
-      <ServicesImageSection />
       <Portfolio />
       <Stats />
       <Testimonials />
