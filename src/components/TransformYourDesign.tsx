@@ -8,57 +8,29 @@ const benefits = [
     id: 1,
     title: 'Save Time',
     subtitle: 'Focus on growing your business while we handle the design work.',
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=300&fit=crop',
     color: '#FF6B35',
-    gradient: 'from-orange-400 to-red-500',
   },
   {
     id: 2,
     title: 'Save Money',
     subtitle: '80% more affordable than hiring in-house or working with agencies.',
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=300&fit=crop',
     color: '#10B981',
-    gradient: 'from-emerald-400 to-teal-500',
   },
   {
     id: 3,
     title: 'Scale Faster',
     subtitle: 'Launch more campaigns, create more content without hiring more staff.',
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
-        <path d="M23 6l-9.5 9.5-5-5L1 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M17 6h6v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <circle cx="12" cy="18" r="4" stroke="currentColor" strokeWidth="1.5"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop',
     color: '#8B5CF6',
-    gradient: 'from-purple-400 to-violet-600',
   },
   {
     id: 4,
     title: 'Brand Consistency',
     subtitle: 'Keep your visual identity consistent across every touchpoint and platform.',
-    icon: (
-      <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-      </svg>
-    ),
+    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=300&h=300&fit=crop',
     color: '#FF4D94',
-    gradient: 'from-pink-400 to-rose-500',
   },
 ];
 
@@ -93,17 +65,30 @@ export default function TransformYourDesign() {
                 transition={{ delay: index * 0.15 }}
                 className="relative"
               >
-                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#E5E0D8] group h-full">
-                  <div className="flex flex-col items-center text-center">
+                <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#E5E0D8] group h-full flex flex-col items-center">
+                  <div className="relative mb-6">
                     <motion.div
-                      className="w-24 h-24 rounded-3xl flex items-center justify-center mb-6 text-white shadow-lg"
-                      style={{ background: benefit.color }}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="w-32 h-32 rounded-full overflow-hidden shadow-xl border-4"
+                      style={{ borderColor: benefit.color }}
+                      whileHover={{ scale: 1.1 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
-                      {benefit.icon}
+                      <img
+                        src={benefit.image}
+                        alt={benefit.title}
+                        className="w-full h-full object-cover"
+                      />
                     </motion.div>
+                    
+                    <motion.div
+                      className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg"
+                      style={{ background: benefit.color }}
+                    >
+                      {index + 1}
+                    </motion.div>
+                  </div>
 
+                  <div className="text-center flex-1 flex flex-col">
                     <h3 
                       className="text-2xl font-bold mb-3 text-[#1A1A2E]"
                       style={{ fontFamily: 'Clash Display, sans-serif' }}
