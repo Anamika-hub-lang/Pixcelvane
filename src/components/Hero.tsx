@@ -8,6 +8,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#FAF7F2]">
       <div className="absolute inset-0 overflow-hidden">
+        {/* Main gradient orbs */}
         <motion.div
           animate={{
             x: [0, 100, 0],
@@ -37,27 +38,90 @@ export default function Hero() {
           }}
         />
         
-        {[...Array(6)].map((_, i) => (
+        {/* Additional colorful gradient circles */}
+        <motion.div
+          animate={{
+            x: [0, 60, 0],
+            y: [0, -40, 0],
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute w-[300px] h-[300px] rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, #8B5CF6 0%, transparent 70%)',
+            top: '20%',
+            left: '10%',
+            filter: 'blur(40px)',
+          }}
+        />
+        <motion.div
+          animate={{
+            x: [0, -50, 0],
+            y: [0, 60, 0],
+          }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute w-[250px] h-[250px] rounded-full opacity-25"
+          style={{
+            background: 'radial-gradient(circle, #06B6D4 0%, transparent 70%)',
+            top: '30%',
+            right: '15%',
+            filter: 'blur(35px)',
+          }}
+        />
+        <motion.div
+          animate={{
+            x: [0, 40, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute w-[200px] h-[200px] rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, #FBBF24 0%, transparent 70%)',
+            bottom: '25%',
+            right: '25%',
+            filter: 'blur(30px)',
+          }}
+        />
+        <motion.div
+          animate={{
+            x: [0, -30, 0],
+            y: [0, 40, 0],
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute w-[180px] h-[180px] rounded-full opacity-25"
+          style={{
+            background: 'radial-gradient(circle, #10B981 0%, transparent 70%)',
+            bottom: '30%',
+            left: '20%',
+            filter: 'blur(25px)',
+          }}
+        />
+        
+        {/* Small floating gradient circles */}
+        {[...Array(10)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full"
             style={{
-              width: Math.random() * 100 + 20,
-              height: Math.random() * 100 + 20,
-              background: i % 2 === 0 
+              width: Math.random() * 80 + 15,
+              height: Math.random() * 80 + 15,
+              background: i % 4 === 0 
                 ? 'linear-gradient(135deg, #FF6B35, #FF4D94)'
-                : 'linear-gradient(135deg, #8B5CF6, #06B6D4)',
-              opacity: 0.15,
-              top: `${20 + Math.random() * 60}%`,
-              left: `${10 + Math.random() * 80}%`,
+                : i % 4 === 1
+                ? 'linear-gradient(135deg, #8B5CF6, #06B6D4)'
+                : i % 4 === 2
+                ? 'linear-gradient(135deg, #FBBF24, #F97316)'
+                : 'linear-gradient(135deg, #10B981, #06B6D4)',
+              opacity: 0.12 + Math.random() * 0.08,
+              top: `${15 + Math.random() * 70}%`,
+              left: `${5 + Math.random() * 90}%`,
             }}
             animate={{
-              y: [0, -30, 0],
+              y: [0, -25, 0],
               x: [0, 15, 0],
               rotate: [0, 180, 360],
             }}
             transition={{
-              duration: 8 + Math.random() * 4,
+              duration: 6 + Math.random() * 4,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,
