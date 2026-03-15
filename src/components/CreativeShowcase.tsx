@@ -90,12 +90,10 @@ export default function CreativeShowcase() {
             className="flex gap-6"
             animate={{ x: [0, -50 * 200] }}
             transition={{
-              duration: 30,
+              duration: 80,
               repeat: Infinity,
               ease: 'linear',
             }}
-            whileHover={{ animationPlayState: 'paused' }}
-            style={{ animationPlayState: 'running' }}
           >
             {[...creativeWorks, ...creativeWorks, ...creativeWorks].map((work, index) => (
               <motion.div
