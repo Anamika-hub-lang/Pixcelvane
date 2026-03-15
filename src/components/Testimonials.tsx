@@ -42,7 +42,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       <div className="absolute inset-0" style={{ background: gradients.hero }} />
       
       <div className="absolute inset-0">
@@ -74,20 +74,20 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-white/70">
-            Join hundreds of satisfied clients who have transformed their brands
+          <p className="text-lg text-white/70">
+            Join hundreds of satisfied clients
           </p>
         </motion.div>
 
         <div className="relative">
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-8xl text-white/10 font-serif">"</div>
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-white/10 font-serif">"</div>
           
-          <div className="relative h-[280px]">
+          <div className="relative h-52">
             <AnimatePresence initial={false} mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -99,9 +99,9 @@ export default function Testimonials() {
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="bg-[#FAF7F2] rounded-3xl p-8 md:p-12 shadow-2xl max-w-2xl mx-auto border border-[#E5E0D8]">
+                <div className="bg-[#FAF7F2] rounded-2xl p-6 shadow-2xl max-w-2xl mx-auto border border-[#E5E0D8]">
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xl md:text-2xl text-[#1A1A2E] mb-8 leading-relaxed">
+                    <p className="text-base md:text-lg text-[#1A1A2E] mb-4 leading-relaxed">
                       {testimonials[currentIndex].quote}
                     </p>
                     <div className="flex items-center gap-4">
