@@ -43,25 +43,25 @@ export default function Testimonials() {
 
   return (
     <section className="py-12 relative overflow-hidden">
-      <div className="absolute inset-0" style={{ background: gradients.hero }} />
+      <div className="absolute inset-0 -top-20 -bottom-20" style={{ background: gradients.hero }} />
       
-      <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
+      <div className="absolute inset-0 -top-20 -bottom-20">
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute rounded-full bg-white/5"
             animate={{
-              y: [0, -30, 0],
-              x: [0, 20, 0],
+              y: [0, -20, 0],
+              x: [0, 15, 0],
             }}
             transition={{
-              duration: 10 + Math.random() * 5,
+              duration: 8 + Math.random() * 4,
               repeat: Infinity,
               ease: 'easeInOut',
             }}
             style={{
-              width: Math.random() * 200 + 50,
-              height: Math.random() * 200 + 50,
+              width: Math.random() * 150 + 40,
+              height: Math.random() * 150 + 40,
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
             }}
