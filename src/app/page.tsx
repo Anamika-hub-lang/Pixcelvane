@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import TrustedBy from '@/components/TrustedBy';
 import HowItWorks from '@/components/HowItWorks';
 import TransformYourDesign from '@/components/TransformYourDesign';
+import DesignInsights from '@/components/DesignInsights';
 import Portfolio from '@/components/Portfolio';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
@@ -19,7 +20,12 @@ export default function Home() {
       <TrustedBy />
       <HowItWorks />
       <TransformYourDesign />
-      <Portfolio />
+      <section id="portfolio">
+        <DesignInsights />
+      </section>
+      <section id="work">
+        <Portfolio />
+      </section>
       <Stats />
       <Testimonials />
       <Pricing />
