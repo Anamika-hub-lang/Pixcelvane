@@ -207,10 +207,12 @@ export const stats = [
 ];
 
 export const trustedCompanies = [
-  { name: 'TechCorp', logo: 'https://via.placeholder.com/150x50?text=TechCorp' },
-  { name: 'InnovateLabs', logo: 'https://via.placeholder.com/150x50?text=InnovateLabs' },
-  { name: 'GrowthCo', logo: 'https://via.placeholder.com/150x50?text=GrowthCo' },
-  { name: 'BrandWorks', logo: 'https://via.placeholder.com/150x50?text=BrandWorks' },
-  { name: 'CreativeHub', logo: 'https://via.placeholder.com/150x50?text=CreativeHub' },
-  { name: 'DesignFirst', logo: 'https://via.placeholder.com/150x50?text=DesignFirst' },
+  { name: 'Stripe', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg', color: '#635BFF' },
+  { name: 'Notion', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png', color: '#000000' },
+  { name: 'Slack', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg', color: '#4A154B' },
+  { name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg', color: '#F24E1E' },
+  { name: 'Webflow', logo: 'https://upload.wikimedia.org/wikipedia/commons/8/81/Webflow_Logo.svg', color: '#146EF5' },
+  { name: 'Framer', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Framer_Logo.png', color: '#000000' },
+  { name: 'Dribbble', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/c2/Dribbble_Logo.png', color: '#EA4C89' },
+  { name: 'InVision', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Invision_Logo.png', color: '#FF3366' },
 ];
