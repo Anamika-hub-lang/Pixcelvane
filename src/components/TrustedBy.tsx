@@ -26,7 +26,7 @@ export default function TrustedBy() {
             <motion.div
               animate={{ x: [0, -50 * 140] }}
               transition={{
-                duration: 180,
+                duration: 300,
                 repeat: Infinity,
                 ease: 'linear',
               }}
