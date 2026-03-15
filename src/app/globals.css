@@ -1,1 +1,90 @@
 @import "tailwindcss";
+
+@theme {
+  --color-maroon: #7A1E2C;
+  --color-maroon-dark: #5A1520;
+  --color-beige: #FAF7F2;
+  --color-text-dark: #1A1A2E;
+  --color-text-muted: #6B7280;
+  --color-border-light: #E5E0D8;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-cyan: #06B6D4;
+  --color-accent-yellow: #FBBF24;
+  
+  --font-family-heading: "Clash Display", sans-serif;
+  --font-family-body: "Satoshi", sans-serif;
+  --font-family-accent: "Space Grotesk", sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 8s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-gradient: gradient 8s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-family-body);
+    background-color: var(--color-beige);
+    color: var(--color-text-dark);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #7A1E2C 0%, #FF6B35 50%, #FF4D94 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #7A1E2C 0%, #FF6B35 50%, #FF4D94 100%);
+  }
+  
+  .bg-gradient-card {
+    background: linear-gradient(135deg, rgba(255,107,53,0.05) 0%, rgba(255,77,148,0.05) 100%);
+  }
+  
+  .bg-gradient-pricing {
+    background: linear-gradient(180deg, #7A1E2C 0%, #5A1520 100%);
+  }
+  
+  .border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #FF6B35, #FF4D94) border-box;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-animation-delayed {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+}
